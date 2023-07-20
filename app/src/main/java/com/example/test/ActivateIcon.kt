@@ -7,6 +7,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import coil.compose.rememberAsyncImagePainter
 
 sealed class AdaptiveIcon {
     abstract fun content(color: Color): @Composable () -> Unit
@@ -31,7 +32,7 @@ sealed class AdaptiveIcon {
         }
     }
 
-    private data class Image(val imageId: Int) : AdaptiveIcon() {
+    private data class ImageRes(val imageId: Int) : AdaptiveIcon() {
         override fun content(color: Color): @Composable () -> Unit = {
             Image(
                 painter = painterResource(id = imageId),
@@ -41,6 +42,15 @@ sealed class AdaptiveIcon {
         }
     }
 
+    private data class ImageUrl(val imageUrl: String) : AdaptiveIcon() {
+        override fun content(color: Color): @Composable () -> Unit = {
+            Image(
+                painter = rememberAsyncImagePainter(imageUrl),
+                contentDescription = null,
+                contentScale = ContentScale.Fit,
+            )
+        }
+    }
     private data class Custom(val content: @Composable () -> Unit) : AdaptiveIcon() {
         override fun content(color: Color): @Composable () -> Unit = content
     }
@@ -48,7 +58,8 @@ sealed class AdaptiveIcon {
     companion object {
         fun icon(icon: Int): AdaptiveIcon = ResIcon(icon)
         fun icon(icon: ImageVector): AdaptiveIcon = ImageVectorIcon(icon)
-        fun image(imageId: Int): AdaptiveIcon = Image(imageId)
+        fun image(imageId: Int): AdaptiveIcon = ImageRes(imageId)
+        fun image(imageUrl: String): AdaptiveIcon = ImageUrl(imageUrl)
         fun custom(content: @Composable () -> Unit): AdaptiveIcon = Custom(content)
     }
 }
