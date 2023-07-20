@@ -16,6 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.test.dimens.HakiBorder
+import com.example.test.dimens.HakiButtonColor
+import com.example.test.dimens.HakiElevation
 
 @Composable
 fun MainButton(
@@ -25,7 +28,7 @@ fun MainButton(
     enabled: Boolean = true,
     shape: Shape = HakiButtonDefaults.shape,
     colors: HakiButtonColor = HakiButtonDefaults.mainButtonColors(),
-    elevations: HakiButtonElevation = HakiButtonDefaults.mainButtonElevation(),
+    elevations: HakiElevation = HakiButtonDefaults.mainButtonElevation(),
     borders: HakiBorder = HakiButtonDefaults.mainButtonBorders(),
     contentPadding: PaddingValues = HakiButtonDefaults.ContentPadding,
     contentMargin: PaddingValues = HakiButtonDefaults.ContentMargin,
@@ -58,7 +61,7 @@ fun OutlineButton(
     enabled: Boolean = true,
     shape: Shape = HakiButtonDefaults.shape,
     colors: HakiButtonColor = HakiButtonDefaults.outlinedButtonColors(),
-    elevations: HakiButtonElevation = HakiButtonDefaults.outlinedButtonElevations(),
+    elevations: HakiElevation = HakiButtonDefaults.outlinedButtonElevations(),
     borders: HakiBorder = HakiButtonDefaults.outlinedButtonBorders(),
     contentPadding: PaddingValues = HakiButtonDefaults.ContentPadding,
     contentMargin: PaddingValues = HakiButtonDefaults.ContentMargin,
@@ -91,7 +94,7 @@ fun ElevateButton(
     enabled: Boolean = true,
     shape: Shape = HakiButtonDefaults.shape,
     colors: HakiButtonColor = HakiButtonDefaults.elevatedButtonColors(),
-    elevations: HakiButtonElevation = HakiButtonDefaults.elevatedButtonElevations(),
+    elevations: HakiElevation = HakiButtonDefaults.elevatedButtonElevations(),
     borders: HakiBorder = HakiButtonDefaults.elevatedButtonBorders(),
     contentPadding: PaddingValues = HakiButtonDefaults.ContentPadding,
     contentMargin: PaddingValues = HakiButtonDefaults.ContentMargin,
@@ -125,7 +128,7 @@ fun HakiButton(
     enabled: Boolean = true,
     shape: Shape = HakiButtonDefaults.shape,
     colors: HakiButtonColor = HakiButtonDefaults.mainButtonColors(),
-    elevations: HakiButtonElevation = HakiButtonDefaults.mainButtonElevation(),
+    elevations: HakiElevation = HakiButtonDefaults.mainButtonElevation(),
     borders: HakiBorder = HakiButtonDefaults.mainButtonBorders(),
     contentPadding: PaddingValues = HakiButtonDefaults.ContentPadding,
     contentMargin: PaddingValues = HakiButtonDefaults.ContentMargin,

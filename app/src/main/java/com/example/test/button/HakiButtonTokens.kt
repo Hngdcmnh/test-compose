@@ -39,7 +39,6 @@ object HakiMainButtonTokens {
     val HoverContainerElevation = 0.dp
     val PressedContainerElevation = 0.dp
 }
-
 object HakiElevatedButtonTokens {
     //Color
     var ContainerColor: Color = primary
@@ -59,7 +58,6 @@ object HakiElevatedButtonTokens {
     val HoverContainerElevation = 0.dp
     val PressedContainerElevation = 0.dp
 }
-
 object HakiOutlinedButtonTokens {
     //Color
     var ContainerColor = Color.White

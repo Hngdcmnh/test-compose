@@ -27,6 +27,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.test.R
+import com.example.test.dimens.HakiBorder
+import com.example.test.dimens.HakiElevation
+import com.example.test.dimens.HakiItemColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -39,7 +42,7 @@ fun ItemSquareTextIn(
     enabled: Boolean = true,
     shape: Shape = HakiItemDefaults.shape,
     colors: HakiItemColor = HakiItemDefaults.itemColorsTextIn(),
-    elevations: HakiItemElevation = HakiItemDefaults.itemElevation(),
+    elevations: HakiElevation = HakiItemDefaults.itemElevation(),
     borders: HakiBorder = HakiItemDefaults.itemBorders(),
     contentPadding: PaddingValues = HakiItemDefaults.ContentPadding,
     contentMargin: PaddingValues = HakiItemDefaults.ContentMargin,
@@ -103,7 +106,7 @@ fun ItemSquareTextOut(
     enabled: Boolean = true,
     shape: Shape = HakiItemDefaults.shape,
     colors: HakiItemColor = HakiItemDefaults.itemColorsTextOut(),
-    elevations: HakiItemElevation = HakiItemDefaults.itemElevation(),
+    elevations: HakiElevation = HakiItemDefaults.itemElevation(),
     borders: HakiBorder = HakiItemDefaults.itemBorders(),
     contentPadding: PaddingValues = HakiItemDefaults.ContentPadding,
     contentMargin: PaddingValues = HakiItemDefaults.ContentMargin,
@@ -166,7 +169,7 @@ fun ItemCircle(
     enabled: Boolean = true,
     shape: Shape = CircleShape,
     colors: HakiItemColor = HakiItemDefaults.itemColorsTextOut(),
-    elevations: HakiItemElevation = HakiItemDefaults.itemElevation(),
+    elevations: HakiElevation = HakiItemDefaults.itemElevation(),
     borders: HakiBorder = HakiItemDefaults.itemBorders(),
     contentPadding: PaddingValues = HakiItemDefaults.ContentPadding,
     contentMargin: PaddingValues = HakiItemDefaults.ContentMargin,

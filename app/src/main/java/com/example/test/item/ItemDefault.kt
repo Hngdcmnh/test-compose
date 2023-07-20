@@ -6,9 +6,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
+import com.example.test.dimens.HakiBorder
+import com.example.test.dimens.HakiItemColor
+import com.example.test.dimens.HakiElevation
 import com.example.test.ui.theme.textDark
 import com.example.test.ui.theme.textLight
-
 object HakiItemDefaults {
     //Padding
     val ContentPadding =
@@ -77,7 +79,7 @@ object HakiItemDefaults {
         focusedElevation: Dp = HakiItemTokens.FocusContainerElevation,
         hoveredElevation: Dp = HakiItemTokens.HoverContainerElevation,
         disabledElevation: Dp = HakiItemTokens.DisabledContainerElevation
-    ): HakiItemElevation = HakiItemElevation(
+    ): HakiElevation = HakiElevation(
         defaultElevation = defaultElevation,
         pressedElevation = pressedElevation,
         focusedElevation = focusedElevation,
@@ -86,25 +88,3 @@ object HakiItemDefaults {
     )
 
 }
-
-data class HakiBorder constructor(
-    val width: Dp,
-    val color: Color
-)
-
-data class HakiItemColor constructor(
-    val containerColor: Color,
-    val contentColor: Color,
-    val disabledContainerColor: Color,
-    val disabledContentColor: Color,
-    val backgroundImageColor: Color
-)
-
-data class HakiItemElevation constructor(
-    val defaultElevation: Dp,
-    val pressedElevation: Dp,
-    val focusedElevation: Dp,
-    val hoveredElevation: Dp,
-    val disabledElevation: Dp,
-)
-

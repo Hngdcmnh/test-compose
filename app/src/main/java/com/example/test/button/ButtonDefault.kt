@@ -11,6 +11,9 @@ import com.example.test.button.HakiButtonTokens.ButtonHorizontalMargin
 import com.example.test.button.HakiButtonTokens.ButtonHorizontalPadding
 import com.example.test.button.HakiButtonTokens.ButtonVerticalMargin
 import com.example.test.button.HakiButtonTokens.ButtonVerticalPadding
+import com.example.test.dimens.HakiBorder
+import com.example.test.dimens.HakiButtonColor
+import com.example.test.dimens.HakiElevation
 
 object HakiButtonDefaults {
     //Padding
@@ -101,7 +104,7 @@ object HakiButtonDefaults {
         focusedElevation: Dp = HakiMainButtonTokens.FocusContainerElevation,
         hoveredElevation: Dp = HakiMainButtonTokens.HoverContainerElevation,
         disabledElevation: Dp = HakiMainButtonTokens.DisabledContainerElevation
-    ): HakiButtonElevation = HakiButtonElevation(
+    ): HakiElevation = HakiElevation(
         defaultElevation = defaultElevation,
         pressedElevation = pressedElevation,
         focusedElevation = focusedElevation,
@@ -116,7 +119,7 @@ object HakiButtonDefaults {
         focusedElevation: Dp = HakiElevatedButtonTokens.FocusContainerElevation,
         hoveredElevation: Dp = HakiElevatedButtonTokens.HoverContainerElevation,
         disabledElevation: Dp = HakiElevatedButtonTokens.DisabledContainerElevation
-    ): HakiButtonElevation = HakiButtonElevation(
+    ): HakiElevation = HakiElevation(
         defaultElevation = defaultElevation,
         pressedElevation = pressedElevation,
         focusedElevation = focusedElevation,
@@ -131,7 +134,7 @@ object HakiButtonDefaults {
         focusedElevation: Dp = HakiOutlinedButtonTokens.FocusContainerElevation,
         hoveredElevation: Dp = HakiOutlinedButtonTokens.HoverContainerElevation,
         disabledElevation: Dp = HakiOutlinedButtonTokens.DisabledContainerElevation
-    ): HakiButtonElevation = HakiButtonElevation(
+    ): HakiElevation = HakiElevation(
         defaultElevation = defaultElevation,
         pressedElevation = pressedElevation,
         focusedElevation = focusedElevation,
@@ -141,24 +144,5 @@ object HakiButtonDefaults {
 
 }
 
-data class HakiBorder constructor(
-    val width: Dp,
-    val color: Color
-)
-
-data class HakiButtonColor constructor(
-    val containerColor: Color,
-    val contentColor: Color,
-    val disabledContainerColor: Color,
-    val disabledContentColor: Color,
-)
-
-data class HakiButtonElevation constructor(
-    val defaultElevation: Dp,
-    val pressedElevation: Dp,
-    val focusedElevation: Dp,
-    val hoveredElevation: Dp,
-    val disabledElevation: Dp,
-)
 
 
