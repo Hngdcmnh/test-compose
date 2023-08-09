@@ -6,10 +6,15 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -48,58 +53,87 @@ class MainActivity : ComponentActivity() {
 fun Greeting() {
     val context = LocalContext.current
     Column() {
-        ItemSquareTextIn(onClick = { /*TODO*/ }, text =  "Item name", icon = {
-            Image(
-                painter = painterResource(id = R.drawable.ic_launcher_background),
-                contentDescription = null,
-                modifier = Modifier
-                    .height(100.dp)
-                    .background(Color(0xFFFFFFFF)),
-                contentScale = ContentScale.Crop,
-            )
-        }, addIcon = {
-            Icon(
-                imageVector = Icons.Filled.Face,
-                contentDescription = null,
-                tint = Color.Red
-            )
-        })
+        Button()
+        Row(modifier = Modifier.fillMaxWidth()) {
 
-        ItemSquareTextOut(onClick = { /*TODO*/ }, text =  "Item name", icon = {
-            Image(
-                painter = painterResource(id = R.drawable.ic_launcher_background),
-                contentDescription = null,
-                modifier = Modifier
-                    .height(100.dp)
-                    .background(Color(0xFFFFFFFF)),
-                contentScale = ContentScale.Crop,
-            )
-        }, addIcon = {
-            Icon(
-                imageVector = Icons.Filled.Face,
-                contentDescription = null,
-                tint = Color.Red
-            )
-        })
+            ItemSquareTextOut(
+                onClick = { /*TODO*/ },
+                modifier = Modifier.weight(1f),
+                text = "ldld",
+                icon = {
+                    Image(
+                        painter = painterResource(id = R.drawable.funny_burp),
+                        modifier = Modifier.aspectRatio(1f),
+                        contentDescription = "",
+                        contentScale = ContentScale.Crop
+                    )
+                })
 
-        ItemCircle(onClick = { /*TODO*/ }, text =  "Item name", icon = {
-            Image(
-                painter = painterResource(id = R.drawable.ic_launcher_background),
-                contentDescription = null,
-                modifier = Modifier
-                    .height(100.dp)
-                    .background(Color(0xFFFFFFFF)),
-                contentScale = ContentScale.Crop,
-            )
-        }, addIcon = {
-            Icon(
-                imageVector = Icons.Filled.Face,
-                contentDescription = null,
-                tint = Color.Red
-            )
-        })
+            ItemSquareTextOut(
+                onClick = { /*TODO*/ },
+                modifier = Modifier.weight(1f),
+                text = "ldld",
+                icon = {
+                    Image(
+                        painter = painterResource(id = R.drawable.funny_burp),
+                        modifier = Modifier.aspectRatio(1f),
+                        contentDescription = "",
+                        contentScale = ContentScale.Crop
+                    )
+                })
+        }
     }
-
+//
+//    ItemSquareTextIn(onClick = { /*TODO*/ }, text = "Item name", icon = {
+//        Image(
+//            painter = painterResource(id = R.drawable.funny_burp),
+//            contentDescription = null,
+//            modifier = Modifier
+//                .aspectRatio(1f)
+//                .background(Color(0xFFFFFFFF)),
+//            contentScale = ContentScale.Crop,
+//        )
+//    }, addIcon = {
+//        Icon(
+//            imageVector = Icons.Filled.Face,
+//            contentDescription = null,
+//            tint = Color.Red
+//        )
+//    })
+//
+//    ItemSquareTextOut(onClick = { /*TODO*/ }, text = "Item name", icon = {
+//        Image(
+//            painter = painterResource(id = R.drawable.ic_launcher_background),
+//            contentDescription = null,
+//            modifier = Modifier
+//                .height(100.dp)
+//                .background(Color(0xFFFFFFFF)),
+//            contentScale = ContentScale.Crop,
+//        )
+//    }, addIcon = {
+//        Icon(
+//            imageVector = Icons.Filled.Face,
+//            contentDescription = null,
+//            tint = Color.Red
+//        )
+//    })
+//
+//    ItemCircle(onClick = { /*TODO*/ }, text = "Item name", icon = {
+//        Image(
+//            painter = painterResource(id = R.drawable.ic_launcher_background),
+//            contentDescription = null,
+//            modifier = Modifier
+//                .height(100.dp)
+//                .background(Color(0xFFFFFFFF)),
+//            contentScale = ContentScale.Crop,
+//        )
+//    }, addIcon = {
+//        Icon(
+//            imageVector = Icons.Filled.Face,
+//            contentDescription = null,
+//            tint = Color.Red
+//        )
+//    })
 }
 
 
